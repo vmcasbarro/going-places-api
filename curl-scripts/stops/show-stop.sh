@@ -1,8 +1,8 @@
 #!/bin/bash
 
-curl "http://localhost:4741/trips/${ID}" \
+curl "http://localhost:4741/trips/${TID}/stops/${SID}" \
   --include \
-  --request DELETE \
+  --request GET \
   --header "Content-Type: application/json" \
   --header "Authorization: Token token=${TOKEN}"
 

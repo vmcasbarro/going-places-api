@@ -1,9 +1,10 @@
 class StopsController < ProtectedController
+  before_action :set_trip
   before_action :set_stop, only: [:show, :update, :destroy]
 
   # GET /stops
   def index
-    @stops = Stop.all
+    @stops = @trip.stops.all.order(:date)
 
     render json: @stops
   end
@@ -15,13 +16,14 @@ class StopsController < ProtectedController
 
   # POST /stops
   def create
-    @stop = Stop.new(stop_params)
+    @stop = @trip.stops.build(stop_params)
 
     if @stop.save
-      render json: @stop, status: :created, location: @stop
+      render json: @stop, status: :created
     else
       render json: @stop.errors, status: :unprocessable_entity
     end
+
   end
 
   # PATCH/PUT /stops/1
@@ -41,11 +43,16 @@ class StopsController < ProtectedController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_stop
-      @stop = Stop.find(params[:id])
+      @stop = @trip.stops.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def stop_params
       params.require(:stop).permit(:location, :date)
+    end
+
+    # only allow a stop to created within a user's trip
+    def set_trip
+      @trip = current_user.trips.find(params[:trip_id])
     end
 end
