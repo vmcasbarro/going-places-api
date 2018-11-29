@@ -2,6 +2,13 @@ Rails[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44
 
 This will be my capstone's readme
 
+1. create rails app using GA-boston's rails api template
+2. deploy to heroku
+3. generate Trip resource
+  1. `bin/rails generate scaffold trip name:string`
+
+
+
 ## [License](LICENSE)
 
 1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
