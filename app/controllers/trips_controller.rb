@@ -9,8 +9,9 @@ class TripsController < ProtectedController
   end
 
   # GET /trips/1
+  # GET /trips/1.json
   def show
-    render json: @trip
+    render json: current_user.trips.find(params[:id])
   end
 
   # POST /trips
