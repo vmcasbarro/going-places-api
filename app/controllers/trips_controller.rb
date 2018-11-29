@@ -3,7 +3,7 @@ class TripsController < ProtectedController
 
   # GET /trips
   def index
-    @trips = Trip.all
+    @trips = current_user.trips.all.order(created_at: :desc)
 
     render json: @trips
   end
