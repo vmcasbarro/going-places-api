@@ -1,3 +1,3 @@
 class StopSerializer < ActiveModel::Serializer
-  attributes :id, :location, :date
+  attributes :id, :location, :date, :trip_id
 end
