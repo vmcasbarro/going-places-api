@@ -6,6 +6,11 @@ This will be my capstone's readme
 2. deploy to heroku
 3. generate Trip resource
   1. `bin/rails generate scaffold trip name:string`
+  2. trip model inherits from ProtectedController
+  3. `bin/rails generate migration AddUserToTrips user:references`
+  4. user & trip models updated to show one:many relationship
+  5. update trip controller to make a trip for the user
+  6. update trip controller to return only an index of the user's trips
 
 
 
