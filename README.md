@@ -16,6 +16,16 @@ This will be my capstone's readme
   9. [D] delete trip if owned by that user
 4. generate Stop resource
   1. `bin/rails generate scaffold stop location:string date:date`
+  2. stop model inherits from ProtectedController
+  3. `bin/rails generate migration AddTripToStops trip:references`
+  4. nest stop routes within trip routes
+  5. trip & stop models updated to show one:many relationship
+  6. set_trip for stop controller (make sure user is updating a trip that they own)
+  7. [C] update stop controller to make a stop for a user's trip
+  8. [R] update stop controller to return only an index of a user's trip
+  9. [R] update stop controller to show a stop only if owned by that user's trip
+  10. [U] update stop if owned by a user's trip
+  11. [D] delete stop if owned by a user's trip
 
 
 
