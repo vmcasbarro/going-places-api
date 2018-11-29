@@ -9,8 +9,13 @@ This will be my capstone's readme
   2. trip model inherits from ProtectedController
   3. `bin/rails generate migration AddUserToTrips user:references`
   4. user & trip models updated to show one:many relationship
-  5. update trip controller to make a trip for the user
-  6. update trip controller to return only an index of the user's trips
+  5. [C] update trip controller to make a trip for the user
+  6. [R] update trip controller to return only an index of the user's trips
+  7. [R] update trip controller to show a trip only if owned by that user
+  8. [U] update trip if owned by that user
+  9. [D] delete trip if owned by that user
+4. generate Stop resource
+  1. `bin/rails generate scaffold stop location:string date:date`
 
 
 
