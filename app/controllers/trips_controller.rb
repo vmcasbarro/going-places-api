@@ -11,7 +11,7 @@ class TripsController < ProtectedController
   # GET /trips/1
   # GET /trips/1.json
   def show
-    render json: current_user.trips.find(params[:id])
+    render json: @trip
   end
 
   # POST /trips
@@ -43,11 +43,12 @@ class TripsController < ProtectedController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_trip
-      @trip = Trip.find(params[:id])
+      @trip = current_user.trips.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def trip_params
       params.require(:trip).permit(:name)
     end
+
 end
