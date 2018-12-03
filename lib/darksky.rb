@@ -11,8 +11,11 @@ class Darksky
   attr_accessor :temp, :location, :icon, :desc, :url, :feel_like
 
   def initialize(response)
+    @timezone = response['timezone']
     @currently = response['currently']
     @daily = response['daily']
+    @hourly = response['hourly']
+    @minutely = response['minutely']
   end
 
   def self.get_forecast(lat, long)
