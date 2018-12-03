@@ -1,7 +1,8 @@
 Rails[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-This will be my capstone's readme
+This will be my capstone's back-end readme
 
+Step Log
 1. create rails app using GA-boston's rails api template
 2. deploy to heroku
 3. generate Trip resource
@@ -27,6 +28,8 @@ This will be my capstone's readme
   10. [U] update stop if owned by a user's trip
   11. [D] delete stop if owned by a user's trip
 
+5. route for dark sky API
+  1. add to gemfile: gem 'httparty' & gem 'figaro'
 
 
 ## [License](LICENSE)
