@@ -1,5 +1,3 @@
-# /lib/DarkSky.rb
-
 require 'httparty'
 
 class Darksky
