@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'Darksky'
+require 'darksky'
 
 class DarkskyController < ApplicationController
 
